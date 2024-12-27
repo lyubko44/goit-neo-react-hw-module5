@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-const API_KEY = '111c8f4ad6dfc99be9f025c21243f8cf';
 const API_READ_ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMTFjOGY0YWQ2ZGZjOTliZTlmMDI1YzIxMjQzZjhjZiIsIm5iZiI6MTczNTI3OTk1Mi43OTgsInN1YiI6IjY3NmU0NTUwM2RmZjBkZTk5YjYxNjljOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ba9fQ_7psVUqEDnya3DSTtG_gz_l7NPdmIbN97lrZJI';
 
 const api = axios.create({
