@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams, Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { getMovieDetails } from '../../services/tmdbApi';
 import { getImageUrl } from "../../services/imageService.js";
@@ -8,13 +8,14 @@ const MovieDetailsPage = () => {
     const [movie, setMovie] = useState(null);
     const navigate = useNavigate();
     const location = useLocation();
+    const previousLocation = useRef(location.state?.from);
 
     useEffect(() => {
         getMovieDetails(movieId).then(setMovie);
     }, [movieId]);
 
     const goBack = () => {
-        navigate(location.state?.from || '/movies');
+        navigate(previousLocation.current || '/movies');
     };
 
     if (!movie) return null;
