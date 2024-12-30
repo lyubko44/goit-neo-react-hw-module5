@@ -3,8 +3,8 @@ import './Navigation.module.css';
 
 const Navigation = () => (
     <nav>
-        <NavLink to="/" activeClassName="active">Home</NavLink>
-        <NavLink to="/movies" activeClassName="active">Movies</NavLink>
+        <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
+        <NavLink to="/movies" className={({ isActive }) => (isActive ? 'active' : '')}>Movies</NavLink>
     </nav>
 );
 
